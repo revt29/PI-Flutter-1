@@ -40,7 +40,7 @@ class Products extends StatelessWidget {
                   maxLines: 2,
                   minFontSize: 14,
                   style: TextStyle(
-                    fontSize: 17,
+                    fontSize:MediaQuery.of(context).size.width * 0.015,
                     fontWeight: FontWeight.w900,
                   ),
                 )

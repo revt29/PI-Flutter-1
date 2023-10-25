@@ -68,6 +68,7 @@ class _BodyContainer2State extends State<BodyContainer2> {
                 TextFormField(
                   controller: _firstNameController,
                   decoration: InputDecoration(labelText: 'Nome'),
+                  style: TextStyle(fontSize: 20),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Por favor, insira o nome.';
@@ -75,9 +76,11 @@ class _BodyContainer2State extends State<BodyContainer2> {
                     return null;
                   },
                 ),
+                SizedBox(height: 10,),
                 TextFormField(
                   controller: _lastNameController,
                   decoration: InputDecoration(labelText: 'Sobrenome'),
+                  style: TextStyle(fontSize: 20),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Por favor, insira o sobrenome.';
@@ -85,9 +88,11 @@ class _BodyContainer2State extends State<BodyContainer2> {
                     return null;
                   },
                 ),
+                SizedBox(height: 10,),
                 TextFormField(
                   controller: _emailController,
                   decoration: InputDecoration(labelText: 'Email'),
+                  style: TextStyle(fontSize: 20),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Por favor, insira o email.';
@@ -95,19 +100,23 @@ class _BodyContainer2State extends State<BodyContainer2> {
                     return null;
                   },
                 ),
+                SizedBox(height: 10,),
                 TextFormField(
                   controller: _raController,
                   decoration: InputDecoration(labelText: 'R.A'),
+                  style: TextStyle(fontSize: 20),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Por favor, insira seu ra no jogo.';
+                      return 'Por favor, insira seu RA .';
                     }
                     return null;
                   },
                 ),
+                SizedBox(height: 10,),
                 TextFormField(
                   controller: _nickController,
                   decoration: InputDecoration(labelText: 'Nick no jogo'),
+                  style: TextStyle(fontSize: 20),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Por favor, insira o seu nick.';
@@ -115,9 +124,11 @@ class _BodyContainer2State extends State<BodyContainer2> {
                     return null;
                   },
                 ),
+                SizedBox(height: 10,),
                 TextFormField(
                   controller: _rankController,
                   decoration: InputDecoration(labelText: 'Rank atual e maior rank'),
+                  style: TextStyle(fontSize: 20),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Por favor, insira o campo.';
@@ -125,9 +136,11 @@ class _BodyContainer2State extends State<BodyContainer2> {
                     return null;
                   },
                 ),
+                SizedBox(height: 10,),
                 TextFormField(
                   controller: _personagemController,
-                  decoration: InputDecoration(labelText: 'Quais sãos seus personagens de conforto (se houver)'),
+                  decoration: InputDecoration(labelText: 'Personagens de conforto (se houver)'),
+                  style: TextStyle(fontSize: 20),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Por favor, insira o campo.';
@@ -135,9 +148,12 @@ class _BodyContainer2State extends State<BodyContainer2> {
                     return null;
                   },
                 ),
+                SizedBox(height: 10,),
                 TextFormField(
                   controller: _expController,
-                  decoration: InputDecoration(labelText: 'Há quanto tempo você joga e se ja participou competitivamente do jogo'),
+                  decoration: InputDecoration(labelText: 'Tempo de jogo e experiência competitiva'),
+                  style: TextStyle(fontSize: 20),
+                  maxLines: null,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Por favor, insira o campo.';
@@ -145,9 +161,11 @@ class _BodyContainer2State extends State<BodyContainer2> {
                     return null;
                   },
                 ),
+                SizedBox(height: 10,),
                 TextFormField(
                   controller: _dispController,
-                  decoration: InputDecoration(labelText: 'Quais dias e hora você está disponível para treinos, campeonatos e afins'),
+                  decoration: InputDecoration(labelText: 'Dias e horário disponíveis na semana'),
+                  style: TextStyle(fontSize: 20),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Por favor, insira o campo.';
@@ -155,6 +173,7 @@ class _BodyContainer2State extends State<BodyContainer2> {
                     return null;
                   },
                 ),
+                SizedBox(height: 10,),
                 SizedBox(height: 20,),
                 ElevatedButton(
                   onPressed: () {
@@ -162,8 +181,13 @@ class _BodyContainer2State extends State<BodyContainer2> {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(content: Text('Formulário enviado!')),
                       );
+                      _formKey.currentState!.reset();
                     }
                   }, child: Text('Enviar'),
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+                    primary: kPrimaryColor,
+                  ),
                 )
               ],
             ),
