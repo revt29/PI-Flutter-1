@@ -39,7 +39,7 @@ List<Product> products = [
   ),
   Product(
     id: 6,
-    title: "OVERWATCH 2",
-    image: "assets/images/ow2.jpg",
+    title: "ROCKET LEAGUE",
+    image: "assets/images/rl.jpg",
   ),
 ];

@@ -28,7 +28,7 @@ class HeaderContainer extends StatelessWidget {
               children: [
                 Header(),
                 SizedBox(
-                  height: 20,
+                  height: 5,
                 ),
               ],
             ),
