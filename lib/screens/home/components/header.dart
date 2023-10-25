@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:maua/model.dart/responsive.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../constants.dart';
 import 'menu.dart';
@@ -25,9 +26,13 @@ class Header extends StatelessWidget {
                   },
                   icon: Icon(Icons.menu))),
         Container(
-          child: const Image(
-            width: 80,
-            image: AssetImage('assets/images/logo.png'),
+          child: Padding(
+            padding: EdgeInsets.only(right: MediaQuery.of(context).size.width * 0.65,
+            left: MediaQuery.of(context).size.width * 0.05),
+            child: const Image(
+              width: 80,    
+              image: AssetImage('assets/images/logo.png'),
+            ),
           ),
         ),
         Spacer(),

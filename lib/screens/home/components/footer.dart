@@ -38,27 +38,7 @@ class Footer extends StatelessWidget {
                       SizedBox(
                         height: 20,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SocialIcon(
-                            icon: "assets/icons/google-icon.svg",
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          // GestureDetector()
-                          SocialIcon(
-                            icon: "assets/icons/facebook-2.svg",
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          SocialIcon(
-                            icon: "assets/icons/twitter.svg",
-                          ),
-                        ],
-                      )
+                    
                     ],
                   ),
                 ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:url_launcher/url_launcher.dart';
+
 import '../../../constants.dart';
 
 class HeaderWebMenu extends StatelessWidget {
@@ -12,9 +14,15 @@ class HeaderWebMenu extends StatelessWidget {
     return Row(
       children: [
         Center(
-          child: HeaderMenu(
-            press: () {},
-            title: "Sobre nós",
+          child: InkWell(
+            onTap: () {
+              launch('https://linktr.ee/mauaesports');
+            },
+            child: HeaderMenu(
+              title: "Sobre Nós", press: () {
+                launch('https://linktr.ee/mauaesports');
+              },
+            ),
           ),
         ),
       ],
@@ -36,7 +44,9 @@ class MobFooterMenu extends StatelessWidget {
         ),
         Center(
           child: HeaderMenu(
-            press: () {},
+            press: () {
+              launch('https://linktr.ee/mauaesports');
+            },
             title: "Sobre nós",
           ),
         ),
@@ -93,7 +103,9 @@ class _MobMenuState extends State<MobMenu> {
             height: kPadding,
           ),
           HeaderMenu(
-            press: () {},
+            press: () {
+              launch('https://linktr.ee/mauaesports');
+            },
             title: "Sobre nós",
           ),
           SizedBox(
