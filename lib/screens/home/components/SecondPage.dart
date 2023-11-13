@@ -14,7 +14,7 @@ Widget build(BuildContext context) {
       backgroundColor: kPrimaryColor,
       centerTitle: true,
       title: Image.asset(
-        'assets/images/logo.png', // Substitua com o caminho da sua imagem
+        'assets/images/logo.png', 
         height: 80,
         width: 300, // Ajuste a altura conforme necessário
       ),
@@ -26,13 +26,6 @@ Widget build(BuildContext context) {
       ),
     ),
     body: HomeScreen2(),
-    floatingActionButton: FloatingActionButton(
-      onPressed: () {
-        // Adicione o código para o botão flutuante aqui
-      },
-      child: Icon(Icons.add),
-      backgroundColor: Colors.blue, // Ajuste a cor conforme necessário
-    ),
   );
 }
 

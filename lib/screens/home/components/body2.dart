@@ -46,14 +46,7 @@ class _BodyContainer2State extends State<BodyContainer2> {
     return Column( // Adicionado um novo Column
       children: [
         Text(
-          'JOGO',
-          style: TextStyle(
-            fontSize: 24, // Tamanho do texto
-            fontWeight: FontWeight.bold, // Negrito
-          ),
-        ),
-        Text(
-          'Formulário para participar do time de ...',
+          'Formulário para participar da equipe:',
           style: TextStyle(
             fontSize: 18, // Tamanho do texto
           ),
@@ -138,15 +131,9 @@ class _BodyContainer2State extends State<BodyContainer2> {
                 ),
                 SizedBox(height: 10,),
                 TextFormField(
-                  controller: _personagemController,
-                  decoration: InputDecoration(labelText: 'Personagens de conforto (se houver)'),
-                  style: TextStyle(fontSize: 20),
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Por favor, insira o campo.';
-                    }
-                    return null;
-                  },
+                controller: _personagemController,
+                decoration: InputDecoration(labelText: 'Personagens de conforto (se houver)'),
+                style: TextStyle(fontSize: 20),
                 ),
                 SizedBox(height: 10,),
                 TextFormField(
